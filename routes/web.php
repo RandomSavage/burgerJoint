@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/menu', function () {
-    return view('menu/about');
+Route::get('/about', function () {
+    return view('pages/about');
 });
 
 Route::get('/menu', function () {
