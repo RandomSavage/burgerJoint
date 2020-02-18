@@ -16,6 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/menu', function () {
+    return view('menu/about');
+});
+
+Route::get('/menu', function () {
     return view('menu/index');
 });
 

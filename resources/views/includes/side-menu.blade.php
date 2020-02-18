@@ -1,4 +1,4 @@
-<div class="welcome-menu">
+<div class="side-menu">
   <a  href="/" class="logo">
     <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Frestaurantlussier.com%2Fwp-content%2Fuploads%2F2017%2F11%2Fmenu_icon.png&f=1&nofb=1" alt="logo">
   </a>
@@ -8,7 +8,10 @@
     </div>
     <ul class="links">
       <li>
-        <a href="/menu">Menu</a>
+        <a href="/menu">Food</a>
+      </li>
+      <li>
+        <a href="/about">About US</a>
       </li>
       <li>
         <a href="/waitlist">WaitList</a>
