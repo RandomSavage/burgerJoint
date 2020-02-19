@@ -1,4 +1,4 @@
-#about-page{
+#waitlist-page{
   padding: 100px;
   h1{
     font-size: 3rem;
@@ -12,6 +12,32 @@
     margin-bottom: 2rem;
     font-weight: 500;
   }
+  form{
+    .form-group{
+      label{
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: black;
+      }
+      .form-control{
+        padding: 10px !important;
+        border: 2px solid rgb(191,38,61);
+        color: rgb(191,38,61);
+        font-size: 1.3rem;
+        height: auto;
+      }
+      button[type="submit"]{
+        background: rgb(191,38,61);
+        border: none;
+        padding: 20px 40px;
+      }
+    }
+  }
+
+  .content-box{
+    background: white;
+    padding: 20px;
+  }
 }
 
 // Extra small devices (portrait phones, less than 576px)
@@ -19,14 +45,17 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 0px) and (max-width: 767px) {
-  #about-page{
+  #waitlist-page{
     padding: 20px;
+    h1{
+      font-size: 2rem;
+    }
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991px) {
-  #about-page{
+  #waitlist-page{
     padding: 20px;
   }
 }
