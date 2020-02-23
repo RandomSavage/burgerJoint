@@ -292,6 +292,46 @@ table {
   }
 }
 
+#menu-page {
+  padding: 100px;
+}
+
+#menu-page #food-preview {
+  padding: 0;
+  background: transparent;
+}
+
+#menu-page #food-preview h2 {
+  color: white;
+  text-transform: uppercase;
+}
+
+#menu-page #food-preview .right-btn,
+#menu-page #food-preview .left-btn {
+  background: black;
+}
+
+#menu-page #food-preview .food-slider .slide {
+  cursor: pointer;
+}
+
+#menu-page #food-preview .food-slider .slide:hover .background {
+  background: black;
+  transform: translate3d(0, -200px, 0);
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #menu-page {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #menu-page {
+    padding: 20px;
+  }
+}
+
 .welcome-jumbo {
   transform: translate3d(300px, 0, 0);
   max-width: calc(100vw - 300px);
