@@ -35,7 +35,7 @@
                                         <a class="nav-link" href="/admin/food-categories/create"> New Food Category<span class="badge badge-secondary">New</span></a>
                                     </li>
                                   </ul>
-                              </div>
+                              <!-- </div> -->
                           </li>
                           <li class="nav-item">
                               <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2-1" aria-controls="submenu-2-1">Food Items</a>
