@@ -16,7 +16,7 @@ Route::get('/', 'StaticPagesController@home');
 
 Route::get('/about', 'StaticPagesController@about');
 
-Route::get('/waitlist', 'StaticPagesController@waitlist');
+Route::get('/reservations', 'StaticPagesController@reservations');
 
 Route::get('/contact', 'StaticPagesController@contact');
 
@@ -42,6 +42,11 @@ Route::get('/admin/food-items', 'admin\FoodItemsController@index');
 Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
 
 Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
+
+//Admin Customers
+Route::get('/admin/offers-members', 'admin\CustomersController@allOffersMembers');
+
+Route::get('/admin/kungpow', 'admin\CustomersController@allReservations');
 
 //Admin Authentication
 Route::get('/admin/register', function () {

@@ -14,10 +14,13 @@
         <a href="/about">About US</a>
       </li>
       <li>
-        <a href="/waitlist">WaitList</a>
+        <a href="/reservations">Reservations</a>
       </li>
       <li>
         <a href="/offers">Offers</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
       </li>
     </ul>
   </div>
