@@ -43,6 +43,13 @@ Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
 
 Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
 
+//Admin Users
+Route::get('/admin/users', 'admin\UsersController@index');
+
+Route::get('/admin/users/create', 'admin\UsersController@create');
+
+Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
+
 //Admin Customers
 Route::get('/admin/offers-members', 'admin\CustomersController@allOffersMembers');
 

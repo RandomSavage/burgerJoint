@@ -77,6 +77,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/admin/users/create">Create Users<span class="badge badge-secondary">New</span></a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/users/1/edit">Edit Users<span class="badge badge-secondary">New</span></a>
+                            </li>
                         </ul>
                     </div>
                 </li>
