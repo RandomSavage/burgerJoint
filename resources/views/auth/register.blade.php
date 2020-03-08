@@ -51,8 +51,16 @@
                     <input class="form-control form-control-lg" type="text" name="nick" required="" placeholder="Username" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <input id="name" type="text" class="form-control form-control-lg @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Name">
-                    @error('name')
+                    <input id="fname" type="text" class="form-control form-control-lg @error('fname') is-invalid @enderror" name="fname" value="{{ old('fname') }}" required autocomplete="fname" autofocus placeholder="First Name">
+                    @error('fname')
+                        <span class="invalid-feedback" role="alert">
+                            <strong style="background: red; padding: 10px; color: white;">{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+                <div class="form-group">
+                    <input id="lname" type="text" class="form-control form-control-lg @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname') }}" required autocomplete="lname" autofocus placeholder="Last Name">
+                    @error('lname')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
