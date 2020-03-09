@@ -47,7 +47,7 @@
                                 <tbody>
                                     @foreach ($users as $user)
                                         <tr>
-                                            <th scope="row">1</th>
+                                            <th scope="row">{{$user->id}}</th>
                                             <td>{{$user->fname}} {{$user->lname}}</td>
                                             <td>{{date('m/d/Y', strtotime($user->updated_at))}}</td>
                                             <td><a href="/admin/users/{{$user->id}}/edit"><i class="far fa-edit"></i></a></td>
