@@ -51,7 +51,20 @@
                                             <td>{{$user->fname}} {{$user->lname}}</td>
                                             <td>{{date('m/d/Y', strtotime($user->updated_at))}}</td>
                                             <td><a href="/admin/users/{{$user->id}}/edit"><i class="far fa-edit"></i></a></td>
-                                            <td><a href="/admin/users/{{$user->id}}/delete" onclick="if(!  confirm('Are you sure you want to delete category?')) {return false;}"><i class="fas fa-trash-alt"></i></a></td>
+                                            <td>
+                                              <!-- <a href="/admin/users/{{$user->id}}/delete" onclick="if(!  confirm('Are you sure you want to delete category?')) {return false;}"><i class="fas fa-trash-alt"></i></a> -->
+                                            <a href="#"
+                                               onclick="event.preventDefault();
+                                                              if(!  confirm('Are you sure you want to delete category?')) {return false;} else {
+                                                             document.getElementById('delete-user-{{$user->id}}').submit()};">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+
+                                            <form id="delete-user-{{$user->id}}" action="/admin/users/{{$user->id}}/delete" method="POST" style="display: none;">
+                                                @method('DELETE')
+                                                @csrf
+                                            </form>
+                                            </td>
                                         </tr>
                                     @endforeach
 
