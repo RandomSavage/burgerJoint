@@ -34,21 +34,38 @@
                         <div class="card">
                             <h5 class="card-header">Edit Food Category</h5>
                             <div class="card-body">
-                                <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                              <form method="POST" action="/admin/food-categories/{{$category->id}}">
+                                    @csrf
+                                    @method('PUT')
                                     <div class="form-group">
-                                        <label for="inputCategory">Category Name</label>
-                                        <input id="inputCategory" type="text" name="category" data-parsley-trigger="change" required="" placeholder="Enter category name" autocomplete="off" class="form-control">
+                                      <label for="inputtitle">Title</label>
+                                        <input id="inputtitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('title', $category->title) }}" required autocomplete="title" autofocus placeholder="Title">
+                                        @error('title')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong style="background: red; padding: 10px; color: white;">{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputCategoryImageUrl">Image URL</label>
-                                        <input id="inputCategoryImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" placeholder="https://www.billys.com/omg/burgers.jpg" autocomplete="off" class="form-control">
+                                      <label for="inputdescription">Description</label>
+                                        <textarea id="inputdescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" value="" required autocomplete="description" autofocus placeholder="Description">{{ old('description', $category->description) }}</textarea>
+                                        @error('description')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong style="background: red; padding: 10px; color: white;">{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-                                            <label class="be-checkbox custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input"><span class="custom-control-label">Remember me</span>
-                                            </label>
-                                        </div>
+                                    <div class="form-group">
+                                      <label for="inputimageurl">Image Url</label>
+                                        <input id="inputimageurl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url', $category->image_url) }}" required autocomplete="image_url" autofocus placeholder="Enter an Image Url" {{ old('image_url', $category->image_url) }}>
+                                        @error('image_url')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong style="background: red; padding: 10px; color: white;">{{ $message }}
+                                                </strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                      <div class="row">
                                         <div class="col-sm-6 pl-0">
                                             <p class="text-right">
                                                 <button type="submit" class="btn btn-space btn-primary">Submit</button>

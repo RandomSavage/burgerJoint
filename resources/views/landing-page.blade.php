@@ -112,7 +112,7 @@
             <div class="background"></div>
             <div class="content">
               <div class="food-title">
-                Drink
+                Drinks
               </div>
               <p class="food-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. commodo consequat.  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
