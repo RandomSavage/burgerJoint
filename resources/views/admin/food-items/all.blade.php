@@ -46,22 +46,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($categories as $category)
+                                    @foreach ($items as $item)
                                         <tr>
-                                            <th scope="row">{{$category->id}}</th>
-                                            <td>{{$category->title}}</td>
-                                            <td>{{date('m/d/Y', strtotime($category->updated_at))}}</td>
-                                            <td><a href="/admin/users/{{$category->id}}/edit"><i class="far fa-edit"></i></a></td>
+                                            <th scope="row">{{$item->id}}</th>
+                                            <td>{{$item->title}}</td>
+                                            <td>{{$item->price}}</td>
+                                            <td>{{date('m/d/Y', strtotime($item->updated_at))}}</td>
+                                            <td><a href="/admin/food-items/{{$item->id}}/edit"><i class="far fa-edit"></i></a></td>
                                             <td>
-                                              <!-- <a href="/admin/users/{{$category->id}}/delete" onclick="if(!  confirm('Are you sure you want to delete category?')) {return false;}"><i class="fas fa-trash-alt"></i></a> -->
+                                              <!-- <a href="/admin/item/{{$item->id}}/delete" onclick="if(!  confirm('Are you sure you want to delete category?')) {return false;}"><i class="fas fa-trash-alt"></i></a> -->
                                             <a href="#"
                                                onclick="event.preventDefault();
-                                                              if(!  confirm('Are you sure you want to delete category?')) {return false;} else {
-                                                             document.getElementById('delete-user-{{$category->id}}').submit()};">
+                                                              if(!  confirm('Are you sure you want to delete item?')) {return false;} else {
+                                                             document.getElementById('delete-item-{{$item->id}}').submit()};">
                                                 <i class="fas fa-trash-alt"></i>
                                             </a>
 
-                                            <form id="delete-user-{{$category->id}}" action="/admin/users/{{$category->id}}/delete" method="POST" style="display: none;">
+                                            <form id="delete-item-{{$item->id}}" action="/admin/food-items/{{$item->id}}/delete" method="POST" style="display: none;">
                                                 @method('DELETE')
                                                 @csrf
                                             </form>
