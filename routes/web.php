@@ -73,10 +73,12 @@ Route::put('/admin/users/{id}', 'admin\UsersController@update');
 Route::delete('/admin/users/{id}/delete', 'admin\UsersController@delete');
 
 //Admin Customers
-Route::get('/admin/offers-members', 'admin\CustomersController@allOffersMembers');
+//Admin Members
+Route::get('/admin/members', 'admin\MemberController@index');
 
-Route::get('/admin/kungpow', 'admin\CustomersController@allReservations');
-
+//Admin Reservations
+Route::get('/admin/kungpow', 'admin\MemberController@allReservations');
+Route::delete('/admin/reservations/{id}/delete', 'admin/MemberController@delete');
 //Admin Authentication
 Route::get('/admin/register', function () {
     return view('admin/register');

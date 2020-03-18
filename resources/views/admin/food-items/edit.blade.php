@@ -39,7 +39,7 @@
                                     @method('PUT')
                                     <div class="form-group">
                                       <label for="inputtitle">Title</label>
-                                        <input id="inputtitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus placeholder="Title">
+                                        <input id="inputtitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('title', $item->title) }}" required autocomplete="title" autofocus placeholder="Title">
                                         @error('title')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong style="background: red; padding: 10px; color: white;">{{ $message }}</strong>
@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="form-group">
                                       <label for="inputprice">Price</label>
-                                        <input id="inputprice" type="text" class="form-control form-control-lg @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" required autocomplete="price" autofocus placeholder="Price">
+                                        <input id="inputprice" type="text" class="form-control form-control-lg @error('price') is-invalid @enderror" name="price" value="{{ old('price', $item->price) }}" required autocomplete="price" autofocus placeholder="Price">
                                         @error('price')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong style="background: red; padding: 10px; color: white;">{{ $message }}</strong>
@@ -61,15 +61,15 @@
                                            @foreach ($categories as $category)
                                               <option value="{{$category->id}}"
                                               @if ($category->id == $item->category_id)
-                                              selected
+                                                selected
                                               @endif
-                                               >{{$category->title}}</option>
+                                              >{{$category->title}}</option>
                                             @endforeach
                                         </select>
                                       </div>
                                       <div class="form-group">
                                         <label for="inputimageurl">Image Url</label>
-                                          <input id="inputimageurl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url') }}" autocomplete="image_url" autofocus placeholder="Enter an image url">{{ old('image_url') }}>
+                                          <input id="inputimageurl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url', $item->image_url) }}" autocomplete="image_url" autofocus placeholder="Enter an image url">
                                           @error('image_url')
                                               <span class="invalid-feedback" role="alert">
                                                   <strong style="background: red; padding: 10px; color: white;">{{ $message }}
@@ -79,7 +79,7 @@
                                       </div>
                                       <div class="form-group">
                                         <label for="inputdescription">Description</label>
-                                          <textarea id="inputdescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" value="" required autocomplete="description" autofocus placeholder="Description">{{ old('description') }}></textarea>
+                                          <textarea id="inputdescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" value="" required autocomplete="description" autofocus placeholder="Description">{{ old('description', $item->description) }}></textarea>
                                           @error('description')
                                               <span class="invalid-feedback" role="alert">
                                                   <strong style="background: red; padding: 10px; color: white;">{{ $message }}</strong>
