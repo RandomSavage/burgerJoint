@@ -69,9 +69,9 @@
                                             </td>
                                         </tr>
                                     @endforeach
-
-                                </tbody>
+                                  </tbody>
                             </table>
+                            {{$items->links()}}
                         </div>
                     </div>
                 </div>

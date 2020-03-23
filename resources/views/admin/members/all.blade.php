@@ -63,7 +63,7 @@
                                                 <i class="fas fa-trash-alt"></i>
                                             </a>
 
-                                            <form id="delete-user-{{$member->id}}" action="/admin/food-categories/{{$member->id}}/delete" method="POST" style="display: none;">
+                                            <form id="delete-member-{{$member->id}}" action="/admin/members/{{$member->id}}/delete" method="POST" style="display: none;">
                                                 @method('DELETE')
                                                 @csrf
                                             </form>
@@ -73,6 +73,7 @@
 
                                 <!-- </tbody> -->
                             </table>
+                            {{$members->links()}}
                         </div>
                     </div>
                 </div>
