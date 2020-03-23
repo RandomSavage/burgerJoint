@@ -14,8 +14,8 @@ class MemberController extends Controller {
   public function index() {
     // $members = Member::All();
     $members = Member::paginate(10);
-    return view('admin/members/all-members', [
-      'categories' => $members
+    return view('admin/members/all', [
+      'members' => $members
     ]);
   }
 
@@ -37,6 +37,7 @@ class MemberController extends Controller {
       $member->description = request('description');
       $member->image_url = request('image_url');
       $member->save();
+        return "Thank You";
         return redirect('/admin/members');
       }
 

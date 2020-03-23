@@ -59,7 +59,7 @@
                                             <a href="#"
                                                onclick="event.preventDefault();
                                                               if(!  confirm('Are you sure you want to delete member?')) {return false;} else {
-                                                             <!-- document.getElementById('delete-user-{{$member->id}}').submit()};"> -->
+                                                             <!-- document.getElementById('delete-user-{{$member->id}}').submit()};">
                                                 <i class="fas fa-trash-alt"></i>
                                             </a>
 
