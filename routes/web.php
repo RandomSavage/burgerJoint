@@ -18,13 +18,17 @@ Route::get('/about', 'StaticPagesController@about');
 
 Route::get('/reservations', 'StaticPagesController@reservations');
 
+Route::post('/reservations', 'StaticPagesController@saveReservation');
+
+Route::get('/reservations/thank-you', 'StaticPagesController@thankyou');
+
 Route::get('/contact', 'StaticPagesController@contact');
 
 Route::get('/offers', 'StaticPagesController@offers');
 
 Route::post('/offers', 'StaticPagesController@registerMember');
 
-Route::get('/offers/thank-you', 'StaticPagesController@offersThankYou');
+Route::get('/offers/thank-you', 'StaticPagesController@thankYou');
 
 Route::get('/menu', 'StaticPagesController@menu');
 
@@ -80,9 +84,20 @@ Route::delete('/admin/users/{id}/delete', 'admin\UsersController@delete');
 //Admin Members
 Route::get('/admin/members', 'admin\MemberController@index');
 
+Route::delete('/admin/members/{id}/delete', 'admin\MemberController@delete');
+
 //Admin Reservations
-Route::get('/admin/kungpow', 'admin\MemberController@allReservations');
-Route::delete('/admin/reservations/{id}/delete', 'admin/MemberController@delete');
+Route::get('/admin/reservations', 'admin\ReservationController@index');
+//
+// Route::get('/admin/reservations', 'admin\ReservationController@create');
+//
+// Route::post('/admin/reservations', 'admin\ReservationController@store');
+//
+// Route::get('/admin/reservations/{id}/edit', 'admin\ReservationController@edit');
+//
+// Route::put('/admin/reservations/{id}/edit', 'admin\ReservationController@update');
+
+Route::delete('/admin/reservations/{id}/delete', 'admin\ReservationController@delete');
 //Admin Authentication
 Route::get('/admin/register', function () {
     return view('admin/register');
