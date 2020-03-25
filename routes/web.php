@@ -93,9 +93,9 @@ Route::get('/admin/reservations', 'admin\ReservationController@index');
 //
 // Route::post('/admin/reservations', 'admin\ReservationController@store');
 //
-// Route::get('/admin/reservations/{id}/edit', 'admin\ReservationController@edit');
+Route::get('/admin/reservations/{id}/edit', 'admin\ReservationController@edit');
 //
-// Route::put('/admin/reservations/{id}/edit', 'admin\ReservationController@update');
+Route::put('/admin/reservations/{id}', 'admin\ReservationController@update');
 
 Route::delete('/admin/reservations/{id}/delete', 'admin\ReservationController@delete');
 //Admin Authentication

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Reservation;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 
 class ReservationController extends Controller
@@ -15,15 +17,17 @@ class ReservationController extends Controller
 
   public function index() {
     // $categories = Foodreservation::All();
-    $reservations = Reservation::paginate(10);
+    $reservations = Reservation::paginate(1);
     return view('admin/reservations/all', [
       'reservations' => $reservations
     ]);
   }
 
   public function create() {
-
-    return view('admin/reservations/create');
+    $reservations = Reservation::All();
+    return view('admin/reservations/create', [
+      'reservations' => $reservations
+    ]);
     }
 
     public function store() {
@@ -66,7 +70,7 @@ class ReservationController extends Controller
         'time' => ['required', 'string'],
       ]);
 
-      $reservation = new Reservation();
+      $reservation = Reservation::find($id);
       $reservation->fname = request('fname');
       $reservation->lname = request('lname');
       $reservation->email = request('email');

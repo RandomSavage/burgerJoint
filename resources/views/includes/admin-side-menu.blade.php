@@ -74,6 +74,7 @@
                                   <ul class="nav flex-column">
                                     <li class="nav-item">
                                         <a class="nav-link" href="/admin/reservations">All Reservations<span class="badge badge-secondary">New</span></a>
+                                        <a class="nav-link" href="/admin/reservations/1/edit">Edit Reservations<span class="badge badge-secondary">New</span></a>
                                         <a class="nav-link" href="/admin/reservations">New Reservations<span class="badge badge-secondary">New</span></a>
                                     </li>
                                   </ul>
