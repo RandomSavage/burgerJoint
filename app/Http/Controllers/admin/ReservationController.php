@@ -15,7 +15,7 @@ class ReservationController extends Controller
 
   public function index() {
     // $categories = Foodreservation::All();
-    $categories = Reservation::paginate(10);
+    $reservations = Reservation::paginate(10);
     return view('admin/reservations/all', [
       'reservations' => $reservations
     ]);

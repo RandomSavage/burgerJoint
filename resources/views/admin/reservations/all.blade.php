@@ -9,13 +9,13 @@
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                 <div class="page-header">
-                    <h2 class="pageheader-title">All Offers Members</h2>
+                    <h2 class="pageheader-title">All Reservations</h2>
                     <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
                     <div class="page-breadcrumb">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/admin" class="breadcrumb-link">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">All Offers Members</li>
+                                <li class="breadcrumb-item active" aria-current="page">All Reservations</li>
                             </ol>
                         </nav>
                     </div>
@@ -32,48 +32,35 @@
                 <!-- ============================================================== -->
                 <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                     <div class="card">
-                        <h5 class="card-header">All Members</h5>
+                        <h5 class="card-header">All Reservations</h5>
                         <div class="card-body">
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th scope="col">id</th>
-                                        <th scope="col">Full Name</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Phone Number</th>
-                                        <th scope="col">Date</th>
-                                        <th scope="col">Delete</th>
+                                        <th scope="col">Total Guests</th>
+                                        <th scope="col">Seating Time</th>
+                                        <th scope="col">Date Created</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($members as $member)
-                                        <tr>
-                                            <th scope="row">{{$member->id}}</th>
-                                            <td>{{$member->fname}} {{$member->lname}}</td>
-                                            <td>{{$member->email}}</td>
-                                            <td>{{$member->phone_number}}</td>
-                                            <td>{{date('m/d/Y', strtotime($member->updated_at))}}</td>
-                                            <!-- <td><a href="/admin/food-categories/{{$member->id}}/edit"><i class="far fa-edit"></i></a></td> -->
-                                            <td>
-                                              <!-- <a href="/admin/users/{{$member->id}}/delete" onclick="if(!  confirm('Are you sure you want to delete member?')) {return false;}"><i class="fas fa-trash-alt"></i></a> -->
-                                            <a href="#"
-                                               onclick="event.preventDefault();
-                                                              if(!  confirm('Are you sure you want to delete member?')) {return false;} else {
-                                                             <!-- document.getElementById('delete-user-{{$member->id}}').submit()};">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </a>
-
-                                            <form id="delete-member-{{$member->id}}" action="/admin/members/{{$member->id}}/delete" method="POST" style="display: none;">
-                                                @method('DELETE')
-                                                @csrf
-                                            </form>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-
-                                <!-- </tbody> -->
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Billy</td>
+                                        <td>Rodriguez</td>
+                                        <td>billy@gmail.com</td>
+                                        <td>347-219-8652</td>
+                                        <td>4</td>
+                                        <td>7:00pm</td>
+                                        <td>3/2/2020</td>
+                                    </tr>
+                                </tbody>
                             </table>
-                            {{$members->links()}}
+                            {{$reservations->links()}}
                         </div>
                     </div>
                 </div>
