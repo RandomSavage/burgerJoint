@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="form-group">
                                       <label for="inputaddress1">Address 1</label>
-                                        <input id="inputaddress1" type="text" class="form-control form-control-lg @error('address_1') is-invalid @enderror" name="address_1" value="{{ old('adress_1', $general_setting->address_1) }}" required autocomplete="address_1" autofocus placeholder="Add Street Adress">
+                                        <input id="inputaddress1" type="text" class="form-control form-control-lg @error('address_1') is-invalid @enderror" name="address_1" value="{{ old('address_1', $general_setting->address_1) }}" required autocomplete="address_1" autofocus placeholder="Add Street Adress">
                                         @error('address_1')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong style="background: red; padding: 10px; color: white;">{{ $message }}</strong>
@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="form-group">
                                       <label for="inputaddress2">Address 2</label>
-                                        <input id="inputaddress2" type="text" class="form-control form-control-lg @error('address_2') is-invalid @enderror" name="address_2" value="{{ old('adress_2', $general_setting->address_2) }}" autocomplete="address_2" autofocus placeholder="">
+                                        <input id="inputaddress2" type="text" class="form-control form-control-lg @error('address_2') is-invalid @enderror" name="address_2" value="{{ old('address_2', $general_setting->address_2) }}" autocomplete="address_2" autofocus placeholder="">
                                         @error('address_2')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong style="background: red; padding: 10px; color: white;">{{ $message }}</strong>
@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="form-group">
                                       <label for="inputcity">City</label>
-                                        <input id="inputcity" type="text" class="form-control form-control-lg @error('city') is-invalid @enderror" name="city" value="{{ old(city', $general_setting->city) }}" required autocomplete="city" autofocus placeholder="">
+                                        <input id="inputcity" type="text" class="form-control form-control-lg @error('city') is-invalid @enderror" name="city" value="{{ old('city', $general_setting->city) }}" required autocomplete="city" autofocus placeholder="">
                                         @error('city')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong style="background: red; padding: 10px; color: white;">{{ $message }}</strong>
@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="form-group">
                                       <label for="inputstate">State</label>
-                                        <input id="inputstate" type="text" class="form-control form-control-lg @error('state') is-invalid @enderror" name="state" value="{{ old(state', $general_setting->state) }}" required autocomplete="state" autofocus placeholder="">
+                                        <input id="inputstate" type="text" class="form-control form-control-lg @error('state') is-invalid @enderror" name="state" value="{{ old('state', $general_setting->state) }}" required autocomplete="state" autofocus placeholder="">
                                         @error('state')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong style="background: red; padding: 10px; color: white;">{{ $message }}</strong>
@@ -83,7 +83,7 @@
                                     </div>
                                     <div class="form-group">
                                       <label for="inputzipcode">Zipcode</label>
-                                        <input id="inputzipcode" type="text" class="form-control form-control-lg @error('zipcode') is-invalid @enderror" name="zipcode" value="{{ old(zipcode', $general_setting->zipcode) }}" required autocomplete="zipcode" autofocus placeholder="">
+                                        <input id="inputzipcode" type="text" class="form-control form-control-lg @error('zipcode') is-invalid @enderror" name="zipcode" value="{{ old('zipcode', $general_setting->zipcode) }}" required autocomplete="zipcode" autofocus placeholder="">
                                         @error('zipcode')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong style="background: red; padding: 10px; color: white;">{{ $message }}</strong>
@@ -92,7 +92,7 @@
                                     </div>
                                     <div class="form-group">
                                       <label for="inputphonenumber">Phone Number</label>
-                                        <input id="inputphonenumber" type="text" class="form-control form-control-lg @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old(phone_number', $general_setting->phone_number) }}" required autocomplete="phone_number" autofocus placeholder="">
+                                        <input id="inputphonenumber" type="text" class="form-control form-control-lg @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number', $general_setting->phone_number) }}" required autocomplete="phone_number" autofocus placeholder="">
                                         @error('phone_number')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong style="background: red; padding: 10px; color: white;">{{ $message }}</strong>

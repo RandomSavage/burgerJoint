@@ -5,6 +5,8 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\GeneralSetting;
+use App\SeoSetting;
+use App\SocialSetting;
 
 class SettingController extends Controller
 {
@@ -20,7 +22,7 @@ class SettingController extends Controller
     ]);
     }
 
-    public function saveGeneral($id) {
+    public function saveGeneral() {
       $id = 1;
       request()->validate([
         'site_title' => ['required', 'string', 'max:255'],
@@ -34,7 +36,6 @@ class SettingController extends Controller
 
       $general_setting = GeneralSetting::find($id);
       $general_setting->site_title = request('site_title');
-      $general_setting->logo_image_url = request('logo_image_url');
       $general_setting->address_1 = request('address_1');
       $general_setting->address_2 = request('address_2');
       $general_setting->city = request('city');
