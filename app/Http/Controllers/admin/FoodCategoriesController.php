@@ -9,9 +9,9 @@ use App\FoodCategory;
 class FoodCategoriesController extends Controller {
 
 
-      public function __construct() {
-          $this->middleware('auth');
-      }
+      // public function __construct() {
+      //     $this->middleware('auth');
+      // }
 
       public function index() {
         // $categories = FoodCategory::All();
@@ -33,7 +33,7 @@ class FoodCategoriesController extends Controller {
             'description' => ['required', 'string'],
             'image_url' => ['required', 'string']
           ]);
-          
+
           $category = new FoodCategory();
           $category->title = request('title');
           $category->description = request('description');

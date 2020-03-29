@@ -40,41 +40,41 @@ Route::get('/menu/{slug}', 'StaticPagesController@singleMenu');
 Route::get('/admin', 'admin\AdminController@dashboard');
 
 //Admin Food Categories
-Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
+Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index')->middleware('role:Admin');
 
-Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create');
+Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create')->middleware('role:Admin');
 
-Route::post('/admin/food-categories', 'admin\FoodCategoriesController@store');
+Route::post('/admin/food-categories', 'admin\FoodCategoriesController@store')->middleware('role:Admin');
 
-Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit');
+Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit')->middleware('role:Admin');
 
-Route::put('/admin/food-categories/{id}', 'admin\FoodCategoriesController@update');
+Route::put('/admin/food-categories/{id}', 'admin\FoodCategoriesController@update')->middleware('role:Admin');
 
-Route::delete('/admin/food-categories/{id}/delete', 'admin\FoodCategoriesController@delete');
+Route::delete('/admin/food-categories/{id}/delete', 'admin\FoodCategoriesController@delete')->middleware('role:Admin');
 
 //Admin Food Items
-Route::get('/admin/food-items', 'admin\FoodItemsController@index');
+Route::get('/admin/food-items', 'admin\FoodItemsController@index')->middleware('role:Admin');
 
-Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
+Route::get('/admin/food-items/create', 'admin\FoodItemsController@create')->middleware('role:Admin');
 
-Route::post('/admin/food-items', 'admin\FoodItemsController@store');
+Route::post('/admin/food-items', 'admin\FoodItemsController@store')->middleware('role:Admin');
 
-Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
+Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit')->middleware('role:Admin');
 
-Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update');
+Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update')->middleware('role:Admin');
 
-Route::delete('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
+Route::delete('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete')->middleware('role:Admin');
 
 //Admin Users
-Route::get('/admin/users', 'admin\UsersController@index');
+Route::get('/admin/users', 'admin\UsersController@index')->middleware('role:Admin');
 
-Route::get('/admin/users/create', 'admin\UsersController@create');
+Route::get('/admin/users/create', 'admin\UsersController@create')->middleware('role:Admin');
 
-Route::post('/admin/users', 'admin\UsersController@store');
+Route::post('/admin/users', 'admin\UsersController@store')->middleware('role:Admin');
 
-Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
+Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit')->middleware('role:Admin');
 
-Route::put('/admin/users/{id}', 'admin\UsersController@update');
+Route::put('/admin/users/{id}', 'admin\UsersController@update')->middleware('role:Admin');
 
 // Route::get('/admin/users/{id}/delete', 'admin\UsersController@delete');
 //
