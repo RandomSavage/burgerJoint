@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+@section('title')
+About - {{$settings["general"]->site_title}}
+@endsection
+
+@section('description')
+Billy Burgers has a rich history in the community.
+@endsection
+
 @section('content')
   <div id="about-page">
     <div class="content-box">

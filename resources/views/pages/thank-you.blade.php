@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+@section('title')
+Thank-you - {{$settings["general"]->site_title}}
+@endsection
+
+@section('description')
+Billy Burgers wants to thank our special community.
+@endsection
+
 @section('content')
   <div id="offers-page">
     <div class="content-box">

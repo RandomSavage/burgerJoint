@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+@section('title')
+Offers - {{$settings["general"]->site_title}}
+@endsection
+
+@section('description')
+Billy Burgers has regular special offers, you will want to know.
+@endsection
+
 @section('content')
   <div id="offers-page">
     <div class="content-box">

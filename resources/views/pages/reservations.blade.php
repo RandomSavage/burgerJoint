@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+@section('title')
+reservations - {{$settings["general"]->site_title}}
+@endsection
+
+@section('description')
+Billy Burgers can seat large parties or special occasions. Book a table to ensure a wonderful time.
+@endsection
+
 @section('content')
   <div id="waitlist-page">
     <div class="content-box">
