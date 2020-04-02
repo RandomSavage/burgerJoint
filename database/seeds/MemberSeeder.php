@@ -13,7 +13,7 @@ class MemberSeeder extends Seeder {
     public function run() {
 
       $faker = Faker::create();
-      foreach(range(1,10) as $index) {
+      foreach(range(1,100) as $index) {
         DB::table('members')->insert([
             'fname' => $faker->firstName,
             'lname' => $faker->lastName,
