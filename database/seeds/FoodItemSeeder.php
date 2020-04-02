@@ -17,7 +17,7 @@ class FoodItemSeeder extends Seeder
           'description' => 'Fresh Ground Sirloin, Lettuce, Billy Sauce',
           'image_url' => 'img/burgers.png',
           'price' => 9.99,
-          'category_id' => 1,
+          'category_id' => 2,
           'updated_at' => Carbon::now(),
           'created_at' => Carbon::now()
       ]);
@@ -37,7 +37,7 @@ class FoodItemSeeder extends Seeder
           'description' => 'Fresh Ground Sirloin, jalepenos, lettuce, Southwest Sauce',
           'image_url' => 'img/burgers.png',
           'price' => 9.99,
-          'category_id' => 3,
+          'category_id' => 2,
           'updated_at' => Carbon::now(),
           'created_at' => Carbon::now()
       ]);
@@ -47,14 +47,14 @@ class FoodItemSeeder extends Seeder
           'description' => 'Plant-based meat substitiute paddy, lettuce, onion, pickle',
           'image_url' => 'img/burgers.png',
           'price' => 12.99,
-          'category_id' => 4,
+          'category_id' => 2,
           'updated_at' => Carbon::now(),
           'created_at' => Carbon::now()
       ]);
 
       DB::table('food_items')->insert([
             'title' => 'Chicken Wings',
-            'description' => 'Charbroiled Black Angus Beef Patty, Two Slices of American Cheese, Two Slices, Mayonnaise and Ketchup Wrapped in Fresh Iceberg Whole-Leaf Lettuce',
+            'description' => 'Mild, Hot, Firetruck',
             'image_url' => '/img/Download-Salad-Transparent-PNG.png',
             'price' => 9.99,
             'category_id' => 1,
@@ -100,7 +100,7 @@ class FoodItemSeeder extends Seeder
         DB::table('food_items')->insert([
             'title' => 'Coke',
             'description' => 'Still Flavoured with Coca Leaves from Medicinal Cocaine?',
-            'image_url' => '/img/Download-Salad-Transparent-PNG.png',
+            'image_url' => '/img/beverages.png',
             'price' => 2.99,
             'category_id' => 6,
             'updated_at' => Carbon::now(),
@@ -109,9 +109,18 @@ class FoodItemSeeder extends Seeder
         DB::table('food_items')->insert([
             'title' => 'Sprite',
             'description' => 'Refreshing Lemon and Lime',
-            'image_url' => '/img/Download-Salad-Transparent-PNG.png',
+            'image_url' => '/img/beverages.png',
             'price' => 2.99,
             'category_id' => 6,
+            'updated_at' => Carbon::now(),
+            'created_at' => Carbon::now()
+        ]);
+        DB::table('food_items')->insert([
+            'title' => 'Guiness',
+            'description' => 'Good Beer',
+            'image_url' => '/img/Download-Salad-Transparent-PNG.png',
+            'price' => 2.99,
+            'category_id' => 7,
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()
         ]);
@@ -120,7 +129,7 @@ class FoodItemSeeder extends Seeder
             'description' => 'Blackout Medicine',
             'image_url' => '/img/Download-Salad-Transparent-PNG.png',
             'price' => 7.99,
-            'category_id' => 6,
+            'category_id' => 8,
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()
         ]);
@@ -129,7 +138,7 @@ class FoodItemSeeder extends Seeder
             'description' => 'Vomit Inducing Shot',
             'image_url' => '/img/Download-Salad-Transparent-PNG.png',
             'price' => 7.99,
-            'category_id' => 6,
+            'category_id' => 8,
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()
         ]);

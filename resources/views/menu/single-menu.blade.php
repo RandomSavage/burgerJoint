@@ -15,7 +15,7 @@
             <div class="col-md-12">
               <h1>{{$foodItem}}</h1>
             </div>
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
               <div class="item">
                 <div class="title">
                   <h4>Texas Burger</h4>
@@ -25,7 +25,7 @@
                   <p>Fresh Slain Steer Ground Sirloin smothered in BBQ Sauce</p>
                 </div>
               </div>
-            </div>
+            </div> -->
             @foreach ($foodItems as $item)
               <div class="col-md-6">
                 <div class="item">
