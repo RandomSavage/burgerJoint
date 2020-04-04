@@ -8,6 +8,13 @@
       <section id="app-layout">
         @include('includes.side-menu')
         <div class="welcome-jumbo">
+          <!-- menu btn attempt -->
+          <div class="menu-btn">
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+            </a>
+          </div>
+          <!-- End of menu btn attempt -->
           <div class="status">
             New
           </div>
@@ -82,6 +89,21 @@
         var b = window.matchMedia("(min-width: 768px) and (max-width: 997px)");
         tabletSlider(b);
         b.addListener(tabletSlider);
+
+        const myFunction = ()=> {
+          let menuBtn = document.querySelector('.menu-btn');
+          let sideMenu = document.querySelector('.side-menu');
+          if(sideMenu.style.width = "0" && sideMenu.style.zIndex < "5") {
+            sideMenu.style.width = "300px";
+            sideMenu.style.zIndex = "5";
+            // sideMenu.classList.toggle('active');
+            // sideMenu.style.transform = "translate3d(300px, 0, 0)";
+
+          } else {
+            sideMenu.style.width = "0";
+            sideMenu.style.zIndex = "0";
+          }
+        }
 
         </script>
     </body>
