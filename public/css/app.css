@@ -833,7 +833,21 @@ h2 {
   margin-bottom: 3rem;
 }
 
-@media (min-width: 0px) and (max-width: 767px) {
+@media (min-width: 0px) and (max-width: 568px) {
+  #app-layout .menu-btn {
+    top: -12px;
+    right: -110px;
+    display: block;
+    font-size: 3rem;
+    z-index: 8;
+  }
+
+  #app-layout .fa {
+    color: black;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 568px) and (min-width: 0px) and (max-width: 767px) {
   h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -943,12 +957,14 @@ h2 {
   }
 }
 
-.content-box {
-  background: white;
-  padding: 20px;
+@media (min-width: 0px) and (max-width: 568px) {
+  .content-box {
+    background: white;
+    padding: 20px;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 0px) and (max-width: 568px) and (min-width: 768px) and (max-width: 991px) {
   #app-layout .menu-btn {
     top: -115px;
     right: -300px;
