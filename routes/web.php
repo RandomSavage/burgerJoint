@@ -26,6 +26,8 @@ Route::get('/reservations/thank-you', 'StaticPagesController@thankyou');
 
 Route::get('/contact', 'StaticPagesController@contact');
 
+// Route::get('/contact', 'ContactFormController@create');
+
 Route::get('/offers', 'StaticPagesController@offers');
 
 Route::post('/offers', 'StaticPagesController@registerMember');
