@@ -26,8 +26,6 @@ Route::get('/reservations/thank-you', 'StaticPagesController@thankyou');
 
 Route::get('/contact', 'StaticPagesController@contact');
 
-// Route::get('/contact', 'ContactFormController@create');
-
 Route::get('/offers', 'StaticPagesController@offers');
 
 Route::post('/offers', 'StaticPagesController@registerMember');
@@ -37,6 +35,11 @@ Route::get('/offers/thank-you', 'StaticPagesController@thankYou');
 Route::get('/menu', 'StaticPagesController@menu');
 
 Route::get('/menu/{slug}', 'StaticPagesController@singleMenu');
+
+//Contact-form
+Route::get('/contact-form', 'ContactFormController@create');
+
+Route::post('/contact-form', 'ContactFormController@store');
 
 //Admin Dashboard
 Route::get('/admin', 'admin\AdminController@dashboard');

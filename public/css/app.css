@@ -835,8 +835,8 @@ h2 {
 
 @media (min-width: 0px) and (max-width: 568px) {
   #app-layout .menu-btn {
-    top: -12px;
-    right: -110px;
+    top: 5px;
+    right: -135px;
     display: block;
     font-size: 3rem;
     z-index: 8;

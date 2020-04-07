@@ -1,6 +1,6 @@
 
 
-<form class="" action="index.html" method="post">
+<form class="" action="/contact-form" method="POST">
   <div class="form-group">
     <label for="name">Name</label>
     <input type="text" name="name" value="" class="form-control form-control-lg">
@@ -24,5 +24,6 @@
       {{$errors->first('message')}}
     </div>
   </div>
+    @csrf
   <button type="submit" class="btn btn-primary mb-2" name="button">SUBMIT</button>
 </form>
