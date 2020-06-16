@@ -96,7 +96,7 @@ class StaticPagesController extends Controller {
   }
 
   public function menu() {
-    $categories =FoodCategory::all();
+    $categories = FoodCategory::all();
     return view('menu/all-categories', [
       'categories' => $categories
     ]);
